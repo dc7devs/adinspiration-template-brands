@@ -14,5 +14,8 @@ jobs:
         with:
           node-version: 20.13.x
 
+      - name: Fix ESLint
+        run: npm run lint:fix
+        
       - name: Run ESLint
         run: npm run lint
