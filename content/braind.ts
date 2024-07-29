@@ -1,11 +1,9 @@
 export const braindInfo = {
-  site_url: '',
   braind_name: '',
-  last_update: '',
+  description: '',
+  logo: '',
   website: '',
   industry: '',
-  sub_industry: '',
-  logo: '',
-  description:
-    ''
+  sub_industry: '',  
+  site_url: '' // Here is the page deploy URL
 };
