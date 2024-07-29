@@ -4,7 +4,7 @@ import { CTA } from '@/components/CTA';
 import { FAQs } from '@/components/FAQs';
 import { CardMedia } from '@/components/media-card';
 import { Badge } from '@/components/ui/badge';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import { ArrowRight, BrandLego, IconoirInternet } from '@/components/ui/icons';
 import { NotificationIcon } from '@/components/ui/icons';
 import { braindInfo } from '@/content/braind';
@@ -48,7 +48,7 @@ export default function Page() {
 
       <section className="mx-auto flex w-full items-center bg-blue-900 px-5 py-10 md:px-10 md:py-6 lg:px-0">
         <div className="mx-auto flex items-stretch justify-center gap-y-20 md:gap-20 lg:gap-32">
-          <div className="text-center md:w-auto">
+          <div className="text-center md:w-auto md:space-y-2">
             <p className="font-inter text-base font-semibold text-neutral-100">
               Industry
             </p>
@@ -57,7 +57,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="text-center md:w-auto">
+          <div className="text-center md:w-auto md:space-y-2">
             <p className="font-inter text-base font-semibold text-neutral-100">
               Total Ads Tracked
             </p>
@@ -68,7 +68,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="text-center md:w-auto">
+          <div className="text-center md:w-auto md:space-y-2">
             <p className="font-inter text-base font-semibold text-neutral-100">
               Last Update
             </p>
@@ -79,7 +79,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="text-center md:w-auto">
+          <div className="text-center md:w-auto md:space-y-2">
             <p className="font-inter text-base font-semibold text-neutral-100">
               Website
             </p>
@@ -105,13 +105,19 @@ export default function Page() {
             winning ads?
           </h2>
 
-          <Button className="inline-flex w-max items-center gap-2 rounded-full bg-blue-500 px-8 py-[11px] font-inter font-medium text-white hover:bg-blue-500/90">
+          <a
+            href={braindInfo.website ? braindInfo.website : '#'}
+            className={cn(
+              buttonVariants(),
+              'inline-flex w-max items-center gap-2 rounded-full bg-blue-500 px-8 py-[11px] font-inter font-medium text-white hover:bg-blue-500/90'
+            )}
+          >
             <NotificationIcon />
             <span>
               Track{' '}
               {braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} Ads
             </span>
-          </Button>
+          </a>
         </div>
 
         <div

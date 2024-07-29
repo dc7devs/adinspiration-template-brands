@@ -10,7 +10,7 @@ export function MenuNavMobile({
   return (
     <nav
       className={cn(
-        'mt-[59px] flex h-auto w-full flex-col overflow-auto border-none bg-transparent px-8 py-4',
+        'flex h-auto w-full flex-col overflow-auto border-none bg-transparent px-8 py-4',
         'flex w-full flex-col space-y-4 text-sm font-semibold text-[#4B5768]',
         className,
         active ? 'flex md:hidden' : 'hidden md:hidden'

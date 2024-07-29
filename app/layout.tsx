@@ -16,9 +16,17 @@ const inter = Inter({
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title:
-      `ADINSPIRATION | ${braindInfo.braind_name.toUpperCase()}` ?? 'TEMPLATE',
-    description: braindInfo.description ?? 'TEMPLATE'
+    metadataBase: new URL(braindInfo.site_url),
+    title: `${braindInfo.braind_name.toUpperCase()} • ADINSPIRATION`,
+    description: braindInfo.description ?? 'TEMPLATE',
+    keywords: ['adinspiration', 'advertising', 'ads', 'inspiration'],
+    openGraph: {
+      siteName:
+        `${braindInfo.braind_name.toUpperCase()} • ADINSPIRATION` ?? 'TEMPLATE',
+      description: braindInfo.description ?? 'TEMPLATE',
+      type: 'website',
+      url: '/'
+    }
   };
 }
 
