@@ -35,14 +35,14 @@ export function Header() {
       <nav className="hidden grow items-center justify-end gap-2 text-end md:flex">
         <a
           target="_blank"
-          href={'https://google.com'}
+          href={'https://adinspiration.com/signin'}
           className={cn(
             buttonVariants({ variant: 'link' }),
             'px-[19px] py-[11px] font-inter text-sm font-medium leading-normal'
           )}
           rel="noreferrer"
         >
-          Log in
+          Sign In
         </a>
         <Separator
           className="hidden h-[25px] w-[1.085px] bg-[#9e9e9e] md:flex"
@@ -50,7 +50,7 @@ export function Header() {
         />
         <a
           target="_blank"
-          href={'https://google.com'}
+          href={'https://adinspiration.com/signup'}
           className={cn(
             buttonVariants(),
             'ml-[26px] h-[38.8px] w-max rounded-full px-[19px] py-[11px]  font-inter text-sm font-medium',
@@ -58,7 +58,7 @@ export function Header() {
           )}
           rel="noreferrer"
         >
-          Sign up
+          Sign Up
         </a>
       </nav>
 

@@ -25,7 +25,7 @@ export function Footer() {
             <li>
               <a
                 className="font-inter text-sm font-normal text-gray"
-                href={'#'}
+                href={'mailto:hello@adinspiration.com'}
               >
                 Suport
               </a>
@@ -36,22 +36,29 @@ export function Footer() {
 
       <div className="mx-auto mb-10 mt-14 inline-flex h-14 w-full items-end justify-between border-t border-black/10 lg:w-4/5">
         <div className="font-inter text-sm font-normal leading-[22px] text-primary">
-          <a href="#" className="hover-underline-animation">
+          <a
+            href="https://adinspiration.com/"
+            className="hover-underline-animation"
+          >
             Adinspiration
           </a>{' '}
           | Copyright {new Date().getFullYear()}
         </div>
         <div>
           <a
-            href="#"
+            href="https://adinspiration.com/privacy"
+            target="_blank"
             className="hover-underline-animation font-inter text-sm font-normal leading-[22px] text-primary"
+            rel="noreferrer"
           >
             Privacy Policy
           </a>{' '}
           |{' '}
           <a
-            href="#"
+            href="https://adinspiration.com/terms"
+            target="_blank"
             className="hover-underline-animation font-inter text-sm font-normal leading-[22px] text-primary"
+            rel="noreferrer"
           >
             Terms of Service
           </a>

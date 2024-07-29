@@ -47,8 +47,8 @@ export default function Page() {
       </section>
 
       <section className="mx-auto flex w-full items-center bg-blue-900 px-5 py-10 md:px-10 md:py-6 lg:px-0">
-        <div className="mx-auto flex items-stretch justify-center gap-y-20 md:gap-20 lg:gap-32">
-          <div className="text-center md:w-auto md:space-y-2">
+        <div className="mx-auto flex items-stretch justify-center gap-20 md:gap-20 lg:gap-32">
+          <div className="hidden space-y-2 text-center md:block md:w-auto">
             <p className="font-inter text-base font-semibold text-neutral-100">
               Industry
             </p>
@@ -57,7 +57,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="text-center md:w-auto md:space-y-2">
+          <div className="w-2/4 space-y-2 text-center md:w-auto">
             <p className="font-inter text-base font-semibold text-neutral-100">
               Total Ads Tracked
             </p>
@@ -68,7 +68,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="text-center md:w-auto md:space-y-2">
+          <div className="hidden space-y-2 text-center md:block md:w-auto">
             <p className="font-inter text-base font-semibold text-neutral-100">
               Last Update
             </p>
@@ -79,7 +79,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="text-center md:w-auto md:space-y-2">
+          <div className="w-2/4 space-y-2 text-center md:w-auto">
             <p className="font-inter text-base font-semibold text-neutral-100">
               Website
             </p>
@@ -98,7 +98,11 @@ export default function Page() {
       </section>
 
       <section className="mx-auto flex w-full flex-col gap-14 px-5 pt-10 md:px-10 md:pt-20 lg:max-w-[1180px] lg:px-0">
-        <div className={'flex flex-col gap-5 md:flex-row md:space-x-[59px]'}>
+        <div
+          className={
+            'flex flex-col items-center gap-5 text-center md:flex-row md:space-x-[59px]'
+          }
+        >
           <h2 className="font-inter text-[26px] font-semibold text-mainblack">
             Want to track{' '}
             {braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}’s
@@ -106,7 +110,7 @@ export default function Page() {
           </h2>
 
           <a
-            href={braindInfo.website ? braindInfo.website : '#'}
+            href={'https://adinspiration.com/signup'}
             className={cn(
               buttonVariants(),
               'inline-flex w-max items-center gap-2 rounded-full bg-blue-500 px-8 py-[11px] font-inter font-medium text-white hover:bg-blue-500/90'
@@ -138,7 +142,7 @@ export default function Page() {
         </div>
 
         <a
-          href={braindInfo.website ? braindInfo.website : '#'}
+          href={'https://adinspiration.com/signup'}
           className={cn(
             buttonVariants({ size: 'lg' }),
             'mx-auto inline-flex w-max cursor-pointer items-center gap-2 rounded-full px-8 py-3 text-sm font-medium'
@@ -153,8 +157,8 @@ export default function Page() {
         <CTA />
       </section>
 
-      <section className="mx-auto flex flex-col items-center gap-14 px-5 py-10 lg:max-w-[1086px] lg:gap-14 lg:pb-[100px] lg:pt-20">
-        <h2 className="font-inter text-3xl font-semibold text-primary md:text-[40px]">
+      <section className="mx-auto flex flex-col items-center justify-center gap-14 px-5 py-10 md:justify-normal lg:max-w-[1086px] lg:gap-14 lg:pb-[100px] lg:pt-20">
+        <h2 className="text-center font-inter text-3xl font-semibold text-primary md:text-left md:text-[40px]">
           Frequently Asked Questions
         </h2>
 

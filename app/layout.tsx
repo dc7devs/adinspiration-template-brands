@@ -16,7 +16,9 @@ const inter = Inter({
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    metadataBase: new URL(braindInfo.site_url),
+    metadataBase: new URL(
+      braindInfo.site_url ? braindInfo.site_url : 'https://example.com'
+    ),
     title: `${braindInfo.braind_name.toUpperCase()} • ADINSPIRATION`,
     description: braindInfo.description ?? 'TEMPLATE',
     keywords: ['adinspiration', 'advertising', 'ads', 'inspiration'],
