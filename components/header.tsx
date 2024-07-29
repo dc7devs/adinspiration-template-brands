@@ -26,7 +26,7 @@ export function Header() {
       <a
         href="https://adinspiration.com/"
         target="_blank"
-        className="grow font-inter text-lg font-normal leading-normal text-primary sm:text-[21px] md:text-center"
+        className="font-inter text-lg font-normal leading-normal text-primary sm:text-[21px] md:text-center"
         rel="noreferrer"
       >
         ADINSPIRATION.COM

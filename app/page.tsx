@@ -4,8 +4,8 @@ import { CTA } from '@/components/CTA';
 import { FAQs } from '@/components/FAQs';
 import { CardMedia } from '@/components/media-card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { BrandLego, IconoirInternet } from '@/components/ui/icons';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { ArrowRight, BrandLego, IconoirInternet } from '@/components/ui/icons';
 import { NotificationIcon } from '@/components/ui/icons';
 import { braindInfo } from '@/content/braind';
 import { cn } from '@/lib/utils';
@@ -119,9 +119,25 @@ export default function Page() {
           )}
         >
           {ads.map(_ => (
-            <CardMedia key={_.id} path={_.image} />
+            <CardMedia
+              key={_.id}
+              path_image={_.image}
+              icon_path={_.icon}
+              brand_name={_.brand_name}
+            />
           ))}
         </div>
+
+        <a
+          href={braindInfo.website ? braindInfo.website : '#'}
+          className={cn(
+            buttonVariants({ size: 'lg' }),
+            'mx-auto inline-flex w-max cursor-pointer items-center gap-2 rounded-full px-8 py-3 text-sm font-medium'
+          )}
+        >
+          <span>Discover more winning ads</span>
+          <ArrowRight />
+        </a>
       </section>
 
       <section className="mx-auto flex flex-col items-center px-5 py-20 md:px-10 lg:max-w-[1180px] lg:px-0">
@@ -144,73 +160,81 @@ export default function Page() {
 const faqsItems = [
   {
     title: `How Many Ads is ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} Running Right Now?`,
-    content: `Discover the current ad campaigns from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} and explore their best-performing ads across Meta platforms. Here, you’ll find the latest winning ads from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} and gain insights into other ads from various brands within the ${braindInfo.category ? braindInfo.category : '[Category]'}.`
+    content: `Discover the current ad campaigns from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} and explore their best-performing ads across Meta platforms. Here, you’ll find the latest winning ads from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} and gain insights into other ads from various brands within the ${braindInfo.industry ? braindInfo.industry : '[Category]'}.`
   },
   {
-    title: `How to Find the Best ${braindInfo.category ? braindInfo.category : '[Category]'} Meta Ad Examples?`,
-    content: `Searching for more ${braindInfo.category ? braindInfo.category : '[Category]'} ad inspiration? We’ve listed top brands here. Click on any brand name to access their complete Facebook Ads Library and discover a treasure trove of ads, including those from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}.`
+    title: `How to Find the Best ${braindInfo.industry ? braindInfo.industry : '[Category]'} Meta Ad Examples?`,
+    content: `Searching for more ${braindInfo.industry ? braindInfo.industry : '[Category]'} ad inspiration? We’ve listed top brands here. Click on any brand name to access their complete Facebook Ads Library and discover a treasure trove of ads, including those from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}.`
   },
   {
     title: `Why is it Essential to Study Top Facebook Ads in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} Sector?`,
-    content: `Analyzing the best ads in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector, including those from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}, provides insights into current market trends, consumer preferences, and effective advertising strategies specific to that sector. This knowledge can help you craft compelling and successful ad campaigns in the ${braindInfo.category ? braindInfo.category : '[Category]'}.`
+    content: `Analyzing the best ads in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector, including those from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}, provides insights into current market trends, consumer preferences, and effective advertising strategies specific to that sector. This knowledge can help you craft compelling and successful ad campaigns in the ${braindInfo.industry ? braindInfo.industry : '[Category]'}.`
   },
   {
     title: `How Do I Tailor My Ad Strategy to Fit the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} Market?`,
-    content: `Understanding the unique nuances of the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} market is crucial. By studying the top-performing ads in this sector, such as those from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}, you can incorporate their successful elements and techniques into your ${braindInfo.category ? braindInfo.category : '[Category]'} campaigns. This targeted approach ensures your ads resonate with your audience and achieve better results.`
+    content: `Understanding the unique nuances of the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} market is crucial. By studying the top-performing ads in this sector, such as those from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}, you can incorporate their successful elements and techniques into your ${braindInfo.industry ? braindInfo.industry : '[Category]'} campaigns. This targeted approach ensures your ads resonate with your audience and achieve better results.`
   },
   {
     title: `Are the Facebook Ad Formats the Same Across All Industries?`,
-    content: `While Facebook provides a standard set of ad formats, the effectiveness and application of these formats can vary by industry. For instance, video ads might perform exceptionally well in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector, including for ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}, but may not yield the same results in another. In the ${braindInfo.category ? braindInfo.category : '[Category]'}, certain formats might be more effective.`
+    content: `While Facebook provides a standard set of ad formats, the effectiveness and application of these formats can vary by industry. For instance, video ads might perform exceptionally well in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector, including for ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}, but may not yield the same results in another. In the ${braindInfo.industry ? braindInfo.industry : '[Category]'}, certain formats might be more effective.`
   },
   {
     title: `How Often Should I Refresh or Update My ${braindInfo.industry ? braindInfo.industry : '[Industry]'} Facebook Ads?`,
-    content: `The ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector, like many others, evolves over time. It’s recommended to regularly monitor, test, and update your ads to align with current trends and audience preferences. For brands like ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} in the ${braindInfo.category ? braindInfo.category : '[Category]'}, keeping your ads fresh and relevant ensures sustained engagement and effectiveness.`
+    content: `The ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector, like many others, evolves over time. It’s recommended to regularly monitor, test, and update your ads to align with current trends and audience preferences. For brands like ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} in the ${braindInfo.industry ? braindInfo.industry : '[Category]'}, keeping your ads fresh and relevant ensures sustained engagement and effectiveness.`
   },
   {
     title: `Trends and Innovations in ${braindInfo.industry ? braindInfo.industry : '[Industry]'} Facebook Ads`,
-    content: `Stay updated with the latest ad trends, innovative campaigns, and groundbreaking strategies that are making waves in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector. Subscribing to our newsletter ensures you never miss out on creative ads from leading brands like ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} in the ${braindInfo.category ? braindInfo.category : '[Category]'}.`
+    content: `Stay updated with the latest ad trends, innovative campaigns, and groundbreaking strategies that are making waves in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector. Subscribing to our newsletter ensures you never miss out on creative ads from leading brands like ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} in the ${braindInfo.industry ? braindInfo.industry : '[Category]'}.`
   }
 ];
 
 const ads = [
   {
     id: 1,
-    title: 'Ad Title',
-    image: '/assets/ad-01.svg'
+    brand_name: braindInfo.braind_name ?? 'Brand name',
+    image: '/assets/ad-01.svg',
+    icon: braindInfo.logo ?? '/assets/brand-logo.svg'
   },
   {
     id: 2,
-    title: 'Ad Title',
-    image: '/assets/ad-02.svg'
+    brand_name: braindInfo.braind_name ?? 'Brand name',
+    image: '/assets/ad-02.svg',
+    icon: braindInfo.logo ?? '/assets/brand-logo.svg'
   },
   {
     id: 3,
-    title: 'Ad Title',
-    image: '/assets/ad-03.svg'
+    brand_name: braindInfo.braind_name ?? 'Brand name',
+    image: '/assets/ad-03.svg',
+    icon: braindInfo.logo ?? '/assets/brand-logo.svg'
   },
   {
     id: 3,
-    title: 'Ad Title',
-    image: '/assets/ad-04.svg'
+    brand_name: braindInfo.braind_name ?? 'Brand name',
+    image: '/assets/ad-04.svg',
+    icon: braindInfo.logo ?? '/assets/brand-logo.svg'
   },
   {
     id: 4,
-    title: 'Ad Title',
-    image: '/assets/ad-05.svg'
+    brand_name: braindInfo.braind_name ?? 'Brand name',
+    image: '/assets/ad-05.svg',
+    icon: braindInfo.logo ?? '/assets/brand-logo.svg'
   },
   {
     id: 5,
-    title: 'Ad Title',
-    image: '/assets/ad-06.svg'
+    brand_name: braindInfo.braind_name ?? 'Brand name',
+    image: '/assets/ad-06.svg',
+    icon: braindInfo.logo ?? '/assets/brand-logo.svg'
   },
   {
     id: 6,
-    title: 'Ad Title',
-    image: '/assets/ad-07.svg'
+    brand_name: braindInfo.braind_name ?? 'Brand name',
+    image: '/assets/ad-07.svg',
+    icon: braindInfo.logo ?? '/assets/brand-logo.svg'
   },
   {
     id: 6,
-    title: 'Ad Title',
-    image: '/assets/ad-08.svg'
+    brand_name: braindInfo.braind_name ?? 'Brand name',
+    image: '/assets/ad-08.svg',
+    icon: braindInfo.logo ?? '/assets/brand-logo.svg'
   }
 ];
