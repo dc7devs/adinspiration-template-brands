@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { braindInfo } from '@/content/braind';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,8 +15,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Template',
-  description: 'Template'
+  title: braindInfo.braind_name
+    ? `${braindInfo.braind_name.toUpperCase()}`
+    : 'Template',
+  description: braindInfo.description ? braindInfo.description : 'Template'
 };
 
 export default function RootLayout({
