@@ -14,7 +14,7 @@ import Image from 'next/image';
 export default function Page() {
   return (
     <>
-      <section className="mx-auto flex h-auto w-full flex-col items-center px-5 pb-14 pt-20 md:px-10 lg:px-0">
+      <section className="mx-auto flex h-auto w-full flex-col items-center px-5 pb-12 pt-14 md:px-10 md:pb-14 md:pt-20 lg:px-0">
         <div className="flex flex-col items-center md:w-2/3">
           <Badge className="mb-4 h-[39px] w-max bg-blue-10 px-4 py-2.5 font-inter text-base font-medium text-blue-500 ring-1 ring-blue-200 hover:bg-blue-10">
             Best Facebook and Instagram Ads
@@ -47,40 +47,43 @@ export default function Page() {
       </section>
 
       <section className="mx-auto flex w-full items-center bg-blue-900 px-5 py-10 md:px-10 md:py-6 lg:px-0">
-        <div className="mx-auto flex flex-wrap items-stretch justify-center gap-y-20 md:gap-20 lg:gap-32">
-          <div className="w-2/4 space-y-3 text-center md:w-auto">
-            <p className="font-inter text-xl font-semibold text-neutral-100">
+        <div className="mx-auto flex items-stretch justify-center gap-y-20 md:gap-20 lg:gap-32">
+          <div className="text-center md:w-auto">
+            <p className="font-inter text-base font-semibold text-neutral-100">
               Industry
             </p>
-            <p className="font-inter text-lg font-normal text-neutral-200">
+            <p className="font-inter text-sm font-normal text-neutral-200">
               {braindInfo.industry ? braindInfo.industry : '[Industry]'}
             </p>
           </div>
-          <div className="w-2/4 space-y-3 text-center md:w-auto">
-            <p className="font-inter text-xl font-semibold text-neutral-100">
+
+          <div className="text-center md:w-auto">
+            <p className="font-inter text-base font-semibold text-neutral-100">
               Total Ads Tracked
             </p>
-            <p className="font-inter text-lg font-normal text-neutral-200">
+            <p className="font-inter text-sm font-normal text-neutral-200">
               {braindInfo.total_ads_tracked
                 ? braindInfo.total_ads_tracked
                 : '[number of ads]'}
             </p>
           </div>
-          <div className="w-2/4 space-y-3 text-center md:w-auto">
-            <p className="font-inter text-xl font-semibold text-neutral-100">
+
+          <div className="text-center md:w-auto">
+            <p className="font-inter text-base font-semibold text-neutral-100">
               Last Update
             </p>
-            <p className="font-inter text-lg font-normal text-neutral-200">
+            <p className="font-inter text-sm font-normal text-neutral-200">
               {braindInfo.last_update
                 ? braindInfo.last_update
                 : '[Last update]'}
             </p>
           </div>
-          <div className="w-2/4 space-y-3 text-center md:w-auto">
-            <p className="font-inter text-xl font-semibold text-neutral-100">
+
+          <div className="text-center md:w-auto">
+            <p className="font-inter text-base font-semibold text-neutral-100">
               Website
             </p>
-            <p className="font-inter text-lg font-normal text-neutral-200">
+            <p className="font-inter text-sm font-normal text-neutral-200">
               <a
                 href={braindInfo.website ? braindInfo.website : '#'}
                 target="_blank"
@@ -94,7 +97,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mx-auto flex w-full flex-col gap-14 px-5 pt-20 md:px-10 lg:max-w-[1180px] lg:px-0">
+      <section className="mx-auto flex w-full flex-col gap-14 px-5 pt-10 md:px-10 md:pt-20 lg:max-w-[1180px] lg:px-0">
         <div className={'flex flex-col gap-5 md:flex-row md:space-x-[59px]'}>
           <h2 className="font-inter text-[26px] font-semibold text-mainblack">
             Want to track{' '}
