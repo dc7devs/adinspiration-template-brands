@@ -5,11 +5,13 @@ import { ImageSource } from './image-source';
 export function CardMedia({
   path_image,
   icon_path,
-  brand_name
+  brand_name,
+  website
 }: {
   path_image: string;
   icon_path: string;
   brand_name: string;
+  website: string;
 }) {
   return (
     <Card
@@ -19,8 +21,6 @@ export function CardMedia({
     >
       <ImageSource path={path_image} />
       <CardFooter className="m-0 mt-3 flex h-9 items-center justify-center gap-2 bg-transparent py-2 pl-3 pr-2">
-        {/* <div className="size-5 rounded-full bg-[#9E9E9E]/10"></div> */}
-
         <Image
           src={icon_path}
           height={20}
@@ -28,9 +28,14 @@ export function CardMedia({
           className="rounded-full bg-[#9E9E9E]/10"
           alt="Logo"
         />
-        <div className="font-inter text-sm font-normal text-[#9E9E9E]">
+        <a
+          href={website}
+          target="_blank"
+          className="font-inter text-sm font-normal text-[#9E9E9E]"
+          rel="noreferrer"
+        >
           {brand_name}
-        </div>
+        </a>
       </CardFooter>
     </Card>
   );

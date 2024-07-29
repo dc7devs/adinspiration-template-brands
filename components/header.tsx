@@ -80,7 +80,10 @@ export function Header() {
           strokeWidth={2}
         />
       </button>
-      <MenuNavMobile active={isOpen} className="absolute left-0 top-[43px]" />
+      <MenuNavMobile
+        active={isOpen}
+        className="absolute left-0 top-[43px] border-b border-solid border-black/10 bg-white"
+      />
     </header>
   );
 }

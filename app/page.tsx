@@ -6,7 +6,6 @@ import { CardMedia } from '@/components/media-card';
 import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { ArrowRight, BrandLego, IconoirInternet } from '@/components/ui/icons';
-import { NotificationIcon } from '@/components/ui/icons';
 import { braindInfo } from '@/content/braind';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -14,7 +13,7 @@ import Image from 'next/image';
 export default function Page() {
   return (
     <>
-      <section className="mx-auto flex h-auto w-full flex-col items-center px-5 pb-12 pt-14 md:px-10 md:pb-14 md:pt-20 lg:px-0">
+      <section className="mx-auto flex h-auto w-full flex-col items-center px-5 pb-10 pt-5 md:px-10 md:pb-14 lg:px-0">
         <div className="flex flex-col items-center md:w-2/3">
           <Badge className="mb-4 h-[39px] w-max bg-blue-10 px-4 py-2.5 font-inter text-base font-medium text-blue-500 ring-1 ring-blue-200 hover:bg-blue-10">
             Best Facebook and Instagram Ads
@@ -39,9 +38,16 @@ export default function Page() {
           </h1>
 
           <p className="text-center font-inter text-base font-normal text-neutral-500 lg:text-lg">
-            {braindInfo.description
-              ? braindInfo.description
-              : '[Brand Description]'}
+            <span className="font-bold">
+              {braindInfo.description
+                ? braindInfo.description
+                : '[Brand Description]'}
+            </span>
+            <br />
+            <span>
+              This page is dedicated to showcasing the best Bali Body ads on
+              Meta platforms: Facebook and Instagram.
+            </span>
           </p>
         </div>
       </section>
@@ -49,41 +55,42 @@ export default function Page() {
       <section className="mx-auto flex w-full items-center bg-blue-900 px-5 py-10 md:px-10 md:py-6 lg:px-0">
         <div className="mx-auto flex items-stretch justify-center gap-20 md:gap-20 lg:gap-32">
           <div className="hidden space-y-2 text-center md:block md:w-auto">
-            <p className="font-inter text-base font-semibold text-neutral-100">
+            <p className="font-inter text-xl font-semibold text-neutral-100">
               Industry
             </p>
-            <p className="font-inter text-sm font-normal text-neutral-200">
+            <p className="font-inter text-lg font-normal text-neutral-200">
               {braindInfo.industry ? braindInfo.industry : '[Industry]'}
             </p>
           </div>
 
+          <div className="hidden space-y-2 text-center md:block md:w-auto">
+            <p className="font-inter text-xl font-semibold text-neutral-100">
+              Sub Industry
+            </p>
+            <p className="font-inter text-lg font-normal text-neutral-200">
+              {braindInfo.sub_industry
+                ? braindInfo.sub_industry
+                : '[Sub industry]'}
+            </p>
+          </div>
+
           <div className="w-2/4 space-y-2 text-center md:w-auto">
-            <p className="font-inter text-base font-semibold text-neutral-100">
+            <p className="font-inter text-xl font-semibold text-neutral-100">
               Total Ads Tracked
             </p>
-            <p className="font-inter text-sm font-normal text-neutral-200">
-              {braindInfo.total_ads_tracked
-                ? braindInfo.total_ads_tracked
-                : '[number of ads]'}
-            </p>
-          </div>
-
-          <div className="hidden space-y-2 text-center md:block md:w-auto">
-            <p className="font-inter text-base font-semibold text-neutral-100">
-              Last Update
-            </p>
-            <p className="font-inter text-sm font-normal text-neutral-200">
-              {braindInfo.last_update
-                ? braindInfo.last_update
-                : '[Last update]'}
-            </p>
+            <a
+              href="https://adinspiration.com/"
+              className="font-inter text-lg font-normal text-neutral-200 underline underline-offset-2 hover:brightness-75"
+            >
+              4600
+            </a>
           </div>
 
           <div className="w-2/4 space-y-2 text-center md:w-auto">
-            <p className="font-inter text-base font-semibold text-neutral-100">
+            <p className="font-inter text-xl font-semibold text-neutral-100">
               Website
             </p>
-            <p className="font-inter text-sm font-normal text-neutral-200">
+            <p className="font-inter text-lg font-normal text-neutral-200">
               <a
                 href={braindInfo.website ? braindInfo.website : '#'}
                 target="_blank"
@@ -116,11 +123,11 @@ export default function Page() {
               'inline-flex w-max items-center gap-2 rounded-full bg-blue-500 px-8 py-[11px] font-inter font-medium text-white hover:bg-blue-500/90'
             )}
           >
-            <NotificationIcon />
             <span>
               Track{' '}
               {braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} Ads
             </span>
+            <ArrowRight className="size-5" />
           </a>
         </div>
 
@@ -137,6 +144,7 @@ export default function Page() {
               path_image={_.image}
               icon_path={_.icon}
               brand_name={_.brand_name}
+              website={braindInfo.website ?? '#'}
             />
           ))}
         </div>
@@ -149,7 +157,7 @@ export default function Page() {
           )}
         >
           <span>Discover more winning ads</span>
-          <ArrowRight />
+          <ArrowRight className="size-5" />
         </a>
       </section>
 

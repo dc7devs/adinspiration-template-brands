@@ -43,14 +43,14 @@ export function NewsletterSubscribeInput() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <div className="inline-flex items-center rounded-full bg-white pr-2">
+                <div className="inline-flex items-center rounded-full bg-white pr-1">
                   <FormControl>
                     <Input
                       className={cn(
                         'h-full rounded-none border-none bg-transparent px-4 py-[14px] focus-visible:ring-0 focus-visible:ring-offset-0',
                         'text-gray-700 text-sm font-medium placeholder:font-inter placeholder:text-xs placeholder:font-normal placeholder:text-neutral-400'
                       )}
-                      placeholder="Enter your email address"
+                      placeholder="Your work email"
                       {...field}
                     />
                   </FormControl>
