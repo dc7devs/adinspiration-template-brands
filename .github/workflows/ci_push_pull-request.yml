@@ -17,4 +17,4 @@ permissions:
 jobs:
   call-lint:
     name: call lint.yml
-    uses: dc7devs/viral-tok-app/.github/workflows/lint.yml@main
+    uses: dc7devs/adinspiration-template-brands/.github/workflows/lint.yml@main
