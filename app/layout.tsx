@@ -14,12 +14,13 @@ const inter = Inter({
   adjustFontFallback: false
 });
 
-export const metadata: Metadata = {
-  title: braindInfo.braind_name
-    ? `${braindInfo.braind_name.toUpperCase()}`
-    : 'Template',
-  description: braindInfo.description ? braindInfo.description : 'Template'
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title:
+      `ADINSPIRATION | ${braindInfo.braind_name.toUpperCase()}` ?? 'TEMPLATE',
+    description: braindInfo.description ?? 'TEMPLATE'
+  };
+}
 
 export default function RootLayout({
   children
