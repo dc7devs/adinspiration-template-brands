@@ -39,14 +39,9 @@ export default function Page() {
           </h1>
 
           <p className="text-center font-inter text-base font-normal text-neutral-500 lg:text-lg">
-            This page is dedicated to showcasing the best Bali Body ads on Meta
-            platforms: Facebook and Instagram and Its innovative advertising
-            strategies that play a big part in the{' '}
-            {braindInfo.industry ? braindInfo.industry : '[Industry]'} and{' '}
-            {braindInfo.sub_industry
-              ? braindInfo.sub_industry
-              : '[Sub_Industry]'}
-            industry.
+            {braindInfo.description
+              ? braindInfo.description
+              : '[Brand Description]'}
           </p>
         </div>
       </section>
@@ -148,40 +143,32 @@ export default function Page() {
 
 const faqsItems = [
   {
-    title: 'How Many Ads is [Brand] Running Right Now?',
-    content:
-      'Discover the current ad campaigns from [Brand] and explore their best-performing ads across Meta platforms. Here, you’ll find the latest winning ads from [Brand] and gain insights into other ads from various brands within the [Category].'
+    title: `How Many Ads is ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} Running Right Now?`,
+    content: `Discover the current ad campaigns from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} and explore their best-performing ads across Meta platforms. Here, you’ll find the latest winning ads from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} and gain insights into other ads from various brands within the ${braindInfo.category ? braindInfo.category : '[Category]'}.`
   },
   {
-    title: 'How to Find the Best [Category] Meta Ad Examples?',
-    content:
-      'Searching for more [Category] ad inspiration? We’ve listed top brands here. Click on any brand name to access their complete Facebook Ads Library and discover a treasure trove of ads, including those from [Brand].'
+    title: `How to Find the Best ${braindInfo.category ? braindInfo.category : '[Category]'} Meta Ad Examples?`,
+    content: `Searching for more ${braindInfo.category ? braindInfo.category : '[Category]'} ad inspiration? We’ve listed top brands here. Click on any brand name to access their complete Facebook Ads Library and discover a treasure trove of ads, including those from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}.`
   },
   {
-    title:
-      'Why is it Essential to Study Top Facebook Ads in the [Industry] Sector?',
-    content:
-      'Analyzing the best ads in the [Industry] sector, including those from [Brand], provides insights into current market trends, consumer preferences, and effective advertising strategies specific to that sector. This knowledge can help you craft compelling and successful ad campaigns in the [Category].'
+    title: `Why is it Essential to Study Top Facebook Ads in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} Sector?`,
+    content: `Analyzing the best ads in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector, including those from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}, provides insights into current market trends, consumer preferences, and effective advertising strategies specific to that sector. This knowledge can help you craft compelling and successful ad campaigns in the ${braindInfo.category ? braindInfo.category : '[Category]'}.`
   },
   {
-    title: 'How Do I Tailor My Ad Strategy to Fit the [Industry] Market?',
-    content:
-      'Understanding the unique nuances of the [Industry] market is crucial. By studying the top-performing ads in this sector, such as those from [Brand], you can incorporate their successful elements and techniques into your [Category] campaigns. This targeted approach ensures your ads resonate with your audience and achieve better results.'
+    title: `How Do I Tailor My Ad Strategy to Fit the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} Market?`,
+    content: `Understanding the unique nuances of the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} market is crucial. By studying the top-performing ads in this sector, such as those from ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}, you can incorporate their successful elements and techniques into your ${braindInfo.category ? braindInfo.category : '[Category]'} campaigns. This targeted approach ensures your ads resonate with your audience and achieve better results.`
   },
   {
-    title: 'Are the Facebook Ad Formats the Same Across All Industries?',
-    content:
-      'While Facebook provides a standard set of ad formats, the effectiveness and application of these formats can vary by industry. For instance, video ads might perform exceptionally well in the [Industry] sector, including for [Brand], but may not yield the same results in another. In the [Category], certain formats might be more effective.'
+    title: `Are the Facebook Ad Formats the Same Across All Industries?`,
+    content: `While Facebook provides a standard set of ad formats, the effectiveness and application of these formats can vary by industry. For instance, video ads might perform exceptionally well in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector, including for ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'}, but may not yield the same results in another. In the ${braindInfo.category ? braindInfo.category : '[Category]'}, certain formats might be more effective.`
   },
   {
-    title: 'How Often Should I Refresh or Update My [Industry] Facebook Ads?',
-    content:
-      'The [Industry] sector, like many others, evolves over time. It’s recommended to regularly monitor, test, and update your ads to align with current trends and audience preferences. For brands like [Brand] in the [Category], keeping your ads fresh and relevant ensures sustained engagement and effectiveness.'
+    title: `How Often Should I Refresh or Update My ${braindInfo.industry ? braindInfo.industry : '[Industry]'} Facebook Ads?`,
+    content: `The ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector, like many others, evolves over time. It’s recommended to regularly monitor, test, and update your ads to align with current trends and audience preferences. For brands like ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} in the ${braindInfo.category ? braindInfo.category : '[Category]'}, keeping your ads fresh and relevant ensures sustained engagement and effectiveness.`
   },
   {
-    title: 'Trends and Innovations in [Industry] Facebook Ads',
-    content:
-      'Stay updated with the latest ad trends, innovative campaigns, and groundbreaking strategies that are making waves in the [Industry] sector. Subscribing to our newsletter ensures you never miss out on creative ads from leading brands like [Brand] in the [Category].'
+    title: `Trends and Innovations in ${braindInfo.industry ? braindInfo.industry : '[Industry]'} Facebook Ads`,
+    content: `Stay updated with the latest ad trends, innovative campaigns, and groundbreaking strategies that are making waves in the ${braindInfo.industry ? braindInfo.industry : '[Industry]'} sector. Subscribing to our newsletter ensures you never miss out on creative ads from leading brands like ${braindInfo.braind_name ? braindInfo.braind_name : '[Brand]'} in the ${braindInfo.category ? braindInfo.category : '[Category]'}.`
   }
 ];
 

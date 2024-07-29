@@ -6,5 +6,6 @@ export const braindInfo = {
   sub_industry: '',
   logo: '',
   description: '',
-  total_ads_tracked: ''
+  total_ads_tracked: '',
+  category: ''
 };
